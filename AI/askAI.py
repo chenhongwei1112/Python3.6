@@ -5,7 +5,7 @@ import datetime
 host = 'http://jisuznwd.market.alicloudapi.com'
 path = '/iqa/query'
 method = 'GET'
-appcode = 'appCode'
+appcode = 'appCode' #https://market.aliyun.com/products/57124001/cmapi013943.html?spm=5176.2020520132.101.5.bdy3yT
 bodys = {}
 
 while True:
