@@ -1,5 +1,6 @@
 from urllib import request, parse
 import json
+import datetime
 
 host = 'http://jisuznwd.market.alicloudapi.com'
 path = '/iqa/query'
@@ -9,7 +10,9 @@ bodys = {}
 
 while True:
     question = dict()
-    question['key'] = input()
+    print(datetime.datetime.now())
+    question['key'] = input('我：')
+    print()
     querys = 'question='+parse.urlencode(question).replace('key=','')
 
     url = host + path + '?' + querys
@@ -21,7 +24,9 @@ while True:
         content = json.loads(response.read().decode('utf-8'))
         #print(content)
         if content['msg'] == 'ok':
-            print(content['result']['content'])
+            print(datetime.datetime.now())
+            print('AI：'+content['result']['content'])
+            print()
     except:
         print('Error!')
 
