@@ -1,3 +1,6 @@
+# python3.6
+# Author: @wyq
+
 from urllib import request, parse, error
 import json
 import os
